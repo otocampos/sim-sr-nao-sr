@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sim_nao/paginas/tela_nao.dart';
+import 'package:sim_nao/constantes/constantesRotas.dart';
 import 'package:sim_nao/paginas/tela_principal.dart';
-import 'package:sim_nao/paginas/tela_sim.dart';
+import 'package:sim_nao/paginas/tela_resposta.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,11 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "tela_inicial",
+      initialRoute: Rotas.rotaInicial,
       routes: {
-        "tela_inicial": (context) => telaPrincipal(),
-        "tela_sim": (context) => telaSim(),
-        "tela_nao":(context) =>telaNao()
+        Rotas.rotaInicial: (context) =>  telaPrincipal(),
+        Rotas.rotaResposta: (context) => telaResposta(),
       },
     );
   }
